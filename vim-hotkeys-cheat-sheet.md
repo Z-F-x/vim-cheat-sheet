@@ -9,3 +9,5 @@ Ctrl + D
 
 Moves the cursor half a page up.
 Ctrl + U 
+
+
