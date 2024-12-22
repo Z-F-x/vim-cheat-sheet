@@ -10,6 +10,144 @@ Ctrl + D
 Moves the cursor half a page up.
 Ctrl + U 
 
+# Additional Vim Commands
+
+## Navigation:
+- `0`: Go to the beginning of the line.
+- `^`: Go to the first non-blank character of the line.
+- `$`: Go to the end of the line.
+- `Ctrl + f`: Scroll forward by one page.
+- `Ctrl + b`: Scroll backward by one page.
+- `Ctrl + e`: Scroll the screen down one line without moving the cursor.
+- `Ctrl + y`: Scroll the screen up one line without moving the cursor.
+
+## Text Manipulation:
+- `x`: Delete the character under the cursor.
+- `s`: Substitute the character under the cursor (replace with text in Insert Mode).
+- `D`: Delete from the cursor position to the end of the line.
+- `C`: Delete from the cursor to the end of the line and enter Insert Mode.
+- `S`: Replace the entire line with new text (enter Insert Mode).
+- `>>`: Indent the current line.
+- `<<`: Un-indent the current line.
+
+## Marks and Jumps:
+- `m[a-z]`: Set a mark at the cursor position.
+- `'a`: Jump to the beginning of the line of mark 'a'.
+- `` `a ``: Jump to the exact position of mark 'a'.
+- `Ctrl + o`: Jump to the previous location.
+- `Ctrl + i`: Jump to the next location.
+
+## Searching:
+- `*`: Search for the word under the cursor (forward).
+- `#`: Search for the word under the cursor (backward).
+- `n`: Move to the next match of the search.
+- `N`: Move to the previous match of the search.
+- `:noh`: Clear the search highlight.
+
+## Buffers and Windows:
+- `:e filename`: Open a file in the current window.
+- `:split` or `:sp`: Split the window horizontally.
+- `:vsplit` or `:vsp`: Split the window vertically.
+- `Ctrl + w h/j/k/l`: Move between splits/windows.
+- `:bnext`: Switch to the next buffer.
+- `:bprev`: Switch to the previous buffer.
+- `:bd`: Delete (close) the current buffer.
+- `:ls`: List all buffers.
+
+## Undo and Redo:
+- `u`: Undo the last change.
+- `Ctrl + r`: Redo the undone change.
+
+---
+
+# Time-Saving Shortcuts
+
+## Quick Saving:
+- `:w`: Save the file.
+- `:w!`: Save a file without confirmation (overwriting any read-only file).
+- `:wa`: Save all open files.
+- `:sav filename`: Save the file with a new name.
+
+## Exiting Vim:
+- `ZZ`: Save and exit (same as `:wq`).
+- `ZQ`: Quit without saving (same as `:q!`).
+- `:qa`: Quit all files.
+
+---
+
+# Configuration and Customization Tips
+
+## Line Numbers:
+- `:set number`: Display line numbers.
+- `:set relativenumber`: Display relative line numbers.
+- `:set nu!`: Toggle line numbers.
+
+## Searching and Replacing:
+- `:s/old/new/g`: Replace all instances of "old" with "new" in the current line.
+- `:%s/old/new/g`: Replace all instances of "old" with "new" in the entire file.
+- `:s/old/new/gc`: Replace with confirmation (asks for each replacement).
+
+## Syntax Highlighting:
+- `:syntax enable`: Enable syntax highlighting.
+- `:syntax off`: Disable syntax highlighting.
+
+## Show Whitespace Characters:
+- `:set list`: Show hidden characters like spaces and tabs.
+- `:set nolist`: Hide those characters.
+
+---
+
+# Plugins and Extensions
+If you're using plugins, you could briefly mention useful ones such as:
+- **NERDTree** for file navigation.
+- **fzf** for fuzzy searching.
+- **coc.nvim** for intellisense and autocompletion.
+- **vim-airline** for a better statusline.
+- **vim-fugitive** for Git integration.
+- **vim-surround** for managing surrounding characters like parentheses, quotes, etc.
+
+---
+
+# Advanced Tips
+
+## Using Registers:
+- `"a` (e.g., `"ayy`): Yank (copy) the current line to register `a`.
+- `"aP`: Paste the content from register `a`.
+- `:reg`: View the contents of all registers.
+
+## Macros:
+- `q[a-z]`: Start recording a macro to register `a-z`.
+- `q`: Stop recording.
+- `@[a-z]`: Replay a macro from register `a-z`.
+- `@@`: Replay the last macro.
+
+---
+
+# Quick Reference for Modes
+
+| Mode             | How to Enter            | Common Commands                    |
+|------------------|-------------------------|-------------------------------------|
+| **Normal Mode**   | `Esc`                   | - Move cursor: h, j, k, l          |
+|                  |                         | - Delete: d, dw, dd, d$            |
+|                  |                         | - Copy: y, yy, yw                  |
+|                  |                         | - Paste: p                         |
+| **Insert Mode**   | `i`, `I`, `a`, `A`, `o`, `O` | - Type text                        |
+|                  |                         | - Move cursor: Ctrl + h (delete), Ctrl + w (delete word) |
+| **Visual Mode**   | `v`, `V`, `Ctrl + v`     | - Select: v, V, Ctrl + v            |
+|                  |                         | - Delete: d                         |
+|                  |                         | - Yank: y                          |
+|                  |                         | - Change: c                         |
+| **Command-Line Mode** | `:`                  | - Save: `:w`                       |
+|                  |                         | - Quit: `:q`, `:wq`, `:q!`          |
+| **Replace Mode**  | `R`, `r`                 | - Replace: `R`                      |
+
+---
+
+# Show File Information
+- `:set filetype`: Show the current file type.
+- `:echo &filetype`: Echo the file type.
+
+
 # Vim Modes and Commands Table
 
 | **Mode**             | **Purpose**                                     | **How to Enter**                                                                 | **How to Exit**                                        | **Common Commands**                                                                                                  |
