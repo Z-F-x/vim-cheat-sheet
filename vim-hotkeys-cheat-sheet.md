@@ -1,14 +1,10 @@
-Go to the end of file:
-Shift + g
+# Vim Navigation Commands
 
-Go to top of file:
-Double g
+- **Go to the end of file**: `Shift + G`
+- **Go to top of file**: `Double g`
+- **Move the cursor half a page down**: `Ctrl + D`
+- **Move the cursor half a page up**: `Ctrl + U`
 
-Move the cursor half a page down.
-Ctrl + D 
-
-Moves the cursor half a page up.
-Ctrl + U 
 
 # Additional Vim Commands
 
